@@ -1,0 +1,17 @@
+security:
+    providers:
+        mock_user:
+            memory:
+                users:
+                    a: {
+                        password: $2y$13$k5mNCjLTfR6wFm8WSEKi6.7JicJ.u.zgqL3sI4Zhhl7j6LzRUA62S,
+                        roles: ['ROLE_ADMIN', 'ROLE_MANAGER', 'ROLE_TEAMMATE']
+                    }
+
+        with_mock_user:
+            chain:
+                providers: ['app_user_provider', 'mock_user']
+
+    firewalls:
+        main:
+            provider: with_mock_user
