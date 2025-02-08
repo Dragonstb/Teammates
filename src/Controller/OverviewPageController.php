@@ -5,6 +5,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
+use App\Entity\User;
 
 /** Controller for the overview page. */
 
@@ -16,10 +17,12 @@ class OverviewPageController extends AbstractController
     public function serve(): Response
     {
         $user = $this->getUser();
-        $text = $user ? 'Your page, ' . $user : 'Why are you here?';
 
-        return new Response(
-            '<html><body><div>' . $text . '</div><a href="./logout">logout</a></body></html>'
+        return $this->render(
+            'pages/overview.html.twig',
+            [
+                'user' => $user ?? 'why are you here?'
+            ]
         );
     }
 }

@@ -1,0 +1,14 @@
+<nav class="flex-elem colored-background">
+    <div>Calendar</div>
+    <div>Team Chat</div>
+    <div>Absence</div>
+    {% if is_granted('ROLE_MANAGER') %}
+        <div>Add Events</div>
+        <div>Edit Events</div>
+        <div>Edit Event Types</div>
+    {% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <div>Modify User</div>
+    {% endif %}
+    <strong><a href="{{ path('app_logout') }}">Logout</a></strong>
+</nav>

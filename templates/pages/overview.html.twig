@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - Teammates</title>
+    <link rel="stylesheet" href="{{ asset('styles/style.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-element">Metropolis Placeholders FC</h1>
+        <div class="header-element">Hello, {{ user }}</div>
+    </header>
+
+    <div class="flex">
+        {{ include('fragments/_nav.html.twig') }}
+
+        <main class="flex-elem">
+            <div>
+                Space for your upcoming events
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.header {
+    background-color: #027;
+    color: #ffa;
+    padding: 1rem;
+}
+
+.header-element {
+    margin: 0.3rem
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-elem {
+    padding: 0.5rem;
+}
+
+.colored-background {
+    background-color: #ffa;
+}
