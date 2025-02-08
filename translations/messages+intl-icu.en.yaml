@@ -1,0 +1,14 @@
+general:
+    logout: 'Logout'
+
+nav:
+    calendar: 'Calendar'
+    chat: 'Team chat'
+    absence: 'Absence'
+    add_events: 'Add events'
+    edit_events: 'Edit events'
+    edit_event_templates: 'Edit event templates'
+    modify_user: 'Modify user'
+
+overview:
+    greeting: 'Hello, {name}'

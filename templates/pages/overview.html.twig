@@ -11,7 +11,8 @@
 <body>
     <header class="header">
         <h1 class="header-element">Metropolis Placeholders FC</h1>
-        <div class="header-element">Hello, {{ user }}</div>
+        {# <div class="header-element">Hello, {{ user }}</div> #}
+        <div class="header-element">{{ 'overview.greeting'|trans({'name': user}) }}</div>
     </header>
 
     <div class="flex">

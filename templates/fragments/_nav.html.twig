@@ -1,14 +1,14 @@
 <nav class="flex-elem colored-background">
-    <div>Calendar</div>
-    <div>Team Chat</div>
-    <div>Absence</div>
+    <div>{{ 'nav.calendar'|trans }}</div>
+    <div>{{ 'nav.chat'|trans }}</div>
+    <div>{{ 'nav.absence'|trans }}</div>
     {% if is_granted('ROLE_MANAGER') %}
-        <div>Add Events</div>
-        <div>Edit Events</div>
-        <div>Edit Event Types</div>
+        <div>{{ 'nav.add_events'|trans }}</div>
+        <div>{{ 'nav.edit_events'|trans }}</div>
+        <div>{{ 'nav.edit_event_templates'|trans }}</div>
     {% endif %}
     {% if is_granted('ROLE_ADMIN') %}
-        <div>Modify User</div>
+        <div>{{ 'nav.modify_user'|trans }}</div>
     {% endif %}
-    <strong><a href="{{ path('app_logout') }}">Logout</a></strong>
+    <strong><a href="{{ path('app_logout') }}">{{ 'general.logout'|trans }}</a></strong>
 </nav>
