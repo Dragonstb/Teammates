@@ -9,6 +9,7 @@ nav:
     edit_events: 'Edit events'
     edit_event_templates: 'Edit event templates'
     modify_user: 'Modify user'
+    account: 'Account settings'
 
 overview:
     greeting: 'Hello, {name}'
