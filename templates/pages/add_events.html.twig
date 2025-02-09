@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Add Events - Teammates</title>
+		<link rel="stylesheet" href="{{ asset('styles/style.css') }}">
+	</head>
+
+	<body>
+		<header class="header">
+			<h1 class="header-element">{{ 'add_events.headline'|trans }}</h1>
+			<div class="header-element">Metropolis Placeholders FC</div>
+		</header>
+
+		<div class="flex">
+			{{ include('fragments/_nav.html.twig') }}
+
+			<main class="flex-elem">
+				<div>
+					<form action="">
+						<div>
+							<label for="event_name">{{ 'add_events.event_name'|trans }}</label>
+							<input type="text" value="" name="_event_name" id="event_name" required>
+						</div>
+
+						<div>
+							<label for="location">{{ 'add_events.location'|trans }}</label>
+							<input type="text" value="" name="_location" id="location" required>
+						</div>
+
+						{# TODO: choose a day of a week and a time interval for creating a bunch of events at once #}
+						<div>
+							<label for="datetime">{{ 'add_events.datetime'|trans }}</label>
+							<input type="datetime-local" name="_datetime" id="datetime" required>
+						</div>
+
+						<fieldset>
+							<legend>{{ 'add_events.part_mode'|trans }}</legend>
+							<div>
+								<input type="radio" value="must_decline" name="_part_mode" id="must_decline" checked>
+								<label for="must_decline">{{ 'add_events.must_decline'|trans }}</label>
+							</div>
+
+							<div>
+								<input type="radio" value="must_join" name="_part_mode" id="must_join">
+								<label for="must_join">{{ 'add_events.must_join'|trans }}</label>
+							</div>
+						</fieldset>
+
+						<div>
+							<input type="submit" value="Add event to schedule">
+						</div>
+					</form>
+				</div>
+			</main>
+		</div>
+
+	</body>
+
+</html>

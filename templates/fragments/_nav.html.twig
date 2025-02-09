@@ -3,7 +3,7 @@
 	<div>{{ 'nav.chat'|trans }}</div>
 	<div>{{ 'nav.absence'|trans }}</div>
 	{% if is_granted('ROLE_MANAGER') %}
-		<div>{{ 'nav.add_events'|trans }}</div>
+		<a href="{{ path('app_add_event') }}">{{ 'nav.add_events'|trans }}</a>
 		<div>{{ 'nav.edit_events'|trans }}</div>
 		<div>{{ 'nav.edit_event_templates'|trans }}</div>
 	{% endif %}

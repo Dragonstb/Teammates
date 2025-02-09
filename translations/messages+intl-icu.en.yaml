@@ -13,3 +13,12 @@ nav:
 
 overview:
     greeting: 'Hello, {name}'
+
+add_events:
+    headline: 'Add Events'
+    event_name: 'Name of the event'
+    location: 'Location'
+    datetime: 'Date and time'
+    part_mode: 'Initial status of participation'
+    must_decline: 'Teammates automatically join the event, if not absent, and must actively decline if they cannot participate.'
+    must_join: 'Teammates must actively join the event if they are planning to participate.'
